@@ -1,0 +1,31 @@
+Request URL: https://mail.163.com/js6/s?sid=HAjkxoYozTfEgjIaDLooRXUPZuhsUlgd&func=mbox:compose
+Request Method: POST
+Status Code: 200 OK
+Remote Address: 220.181.12.209:443
+Referrer Policy: strict-origin-when-cross-origin
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Language: zh-CN
+Content-Type: text/javascript;charset=UTF-8
+Date: Fri, 14 May 2021 03:13:52 GMT
+Server: nginx
+Transfer-Encoding: chunked
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+Accept: text/javascript
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Connection: keep-alive
+Content-Length: 1330
+Content-type: application/x-www-form-urlencoded
+Cookie: starttime=; NTES_SESS=ImSi6L2BHMfUzdG.HlhaQ6OhlUbtc1g8wTimYDA4sJsKQkujQqfOaELQnegNi_uqegzLOEJYh7KQnXrrm2l9H1Jczbkx3mG9g8Ofrn9ChsJgSgKGJuNK8vRBYQh8LUayFUc_KxshAiJMkQcj7Xq13B5FwdVbk00zWfSZ83Z1djCFTeMmkbL5A67CcK5AKo7P6ExU7XTOh.075oCNvIXxd0IDw3qdtQBAP; S_INFO=1620958933|0|3&80##|m15652352581_1; P_INFO=m15652352581_1@163.com|1620958933|0|mail163|00&99|bej&1620943849&caldav#bej&null#10#0#0|156581&1|mail163|15652352581@163.com; mail_upx=t1bj.mail.163.com|t2bj.mail.163.com|t3bj.mail.163.com|t4bj.mail.163.com; mail_upx_nf=; mail_idc=""; Coremail=c7c600baa9a00%HAjkxoYozTfEgjIaDLooRXUPZuhsUlgd%g1a5.mail.163.com; MAIL_ENTRY_INFO=1|0|mail163|email163; MAIL_ENTRY_CS=ade1f831aff36241de81127657398aea; cm_last_info=dT1tMTU2NTIzNTI1ODFfMSU0MDE2My5jb20mZD1odHRwcyUzQSUyRiUyRm1haWwuMTYzLmNvbSUyRmpzNiUyRm1haW4uanNwJTNGc2lkJTNESEFqa3hvWW96VGZFZ2pJYURMb29SWFVQWnVoc1VsZ2Qmcz1IQWpreG9Zb3pUZkVnaklhRExvb1JYVVBadWhzVWxnZCZoPWh0dHBzJTNBJTJGJTJGbWFpbC4xNjMuY29tJTJGanM2JTJGbWFpbi5qc3AlM0ZzaWQlM0RIQWpreG9Zb3pUZkVnaklhRExvb1JYVVBadWhzVWxnZCZ3PWh0dHBzJTNBJTJGJTJGbWFpbC4xNjMuY29tJmw9LTEmdD03JmFzPXRydWU=; MAIL_SESS=ImSi6L2BHMfUzdG.HlhaQ6OhlUbtc1g8wTimYDA4sJsKQkujQqfOaELQnegNi_uqegzLOEJYh7KQnXrrm2l9H1Jczbkx3mG9g8Ofrn9ChsJgSgKGJuNK8vRBYQh8LUayFUc_KxshAiJMkQcj7Xq13B5FwdVbk00zWfSZ83Z1djCFTeMmkbL5A67CcK5AKo7P6ExU7XTOh.075oCNvIXxd0IDw3qdtQBAP; MAIL_SINFO=1620958933|0|3&80##|m15652352581_1; MAIL_PINFO=m15652352581_1@163.com|1620958933|0|mail163|00&99|bej&1620943849&caldav#bej&null#10#0#0|156581&1|mail163|15652352581@163.com; secu_info=1; mail_entry_sess=1ed1daa96da718653fb8ec97a3b4e23227f8a904c69acc39d986a1279c3b12ebb874344b46bad65635f2231c4f2625936f4f98e3ed9bd56c55a26c401d498aaca19697416be3b9e6d394a8486ec214c303fdada0656cf0362bfa57d8410e1e55ba602ef40adf0980e12ba2f2821afdad75107574ccf8e04cd3821c790a7c87ade2c9a269692533e53f17cfb0820be46d3db7c11508257e702804d5f7a2696e64c21ebceda2a18c5eeed1b1e5ef7bd90494e6ed6b6b4557dd07dae085bc70ae73; JSESSIONID=C551E32A325A4F1A1CD1FA9F5EEC56B4; locale=; face=js6; Coremail.sid=HAjkxoYozTfEgjIaDLooRXUPZuhsUlgd; mail_style=js6; mail_uid=m15652352581_1@163.com; mail_host=mail.163.com; _ntes_nnid=1c4312ec00fac42da02c8885f6d4bffb,1620959003000; _ntes_nuid=1c4312ec00fac42da02c8885f6d4bffb
+Host: mail.163.com
+Origin: https://mail.163.com
+Referer: https://mail.163.com/js6/main.jsp?sid=HAjkxoYozTfEgjIaDLooRXUPZuhsUlgd&df=email163
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36
+sid: HAjkxoYozTfEgjIaDLooRXUPZuhsUlgd
+func: mbox:compose
+var: <?xml version="1.0"?><object><string name="id">c:1620961929148</string><object name="attrs"><string name="account">"123"&lt;15652352581@163.com&gt;</string><boolean name="showOneRcpt">false</boolean><array name="to"><string>qapublic@163.com</string></array><array name="cc"/><array name="bcc"/><string name="subject">shadongxi</string><boolean name="isHtml">true</boolean><string name="content">&lt;div style="line-height:1.7;color:#000000;font-size:14px;font-family:Arial"&gt;&lt;p style="margin:0;"&gt;&lt;br /&gt;&lt;/p&gt;&lt;/div&gt;</string><int name="priority">3</int><boolean name="saveSentCopy">true</boolean><string name="charset">GBK</string><null name="ctrls"/></object><boolean name="returnInfo">false</boolean><string name="action">deliver</string><int name="saveTextThreshold">1048576</int><string name="mrcid">fecb1f5e29db86fe624bd4b82198d408</string></object>
