@@ -7,7 +7,7 @@ TEST= test
 PROG = libnsxz.a
 TARGET_INC = $(TOP_DIR)/target/inc
 TARGET_LIB = $(TOP_DIR)/target/lib
-TARGET_SO = $(TOP_DIR)/target/so
+TARGET_SO = $(TOP_DIR)/ffffftarget/so
 
 OBJS = nsxz.o
 TestObj=testxz.o
