@@ -1,0 +1,94 @@
+
+type ReturnCodeEnum int32
+
+const (
+    QUERY_SUCCESS               ReturnCodeEnum = 0
+    SERVER_ERROR               ReturnCodeEnum = 1000
+	REQUEST_ERROR               ReturnCodeEnum = 1001
+	INTERNAL_ERROR               ReturnCodeEnum = 1002
+)
+
+var ReturnCodeMsg = map[ReturnCodeEnum]string{
+    QUERY_SUCCESS:               "OK",
+    SERVER_ERROR:                "Server Error",
+    REQUEST_ERROR:               "Request Error",
+    INTERNAL_ERROR:              "Internal Error",
+}
+
+type IocRespData struct {
+	CODE     int        `json:"code"`
+	MSG      string     `json:"msg"`
+	RESULT   ResultInfo   `json:"result"`
+}
+type ResultInfo struct {
+	URL          string      `json:"url"`
+	ACTION       int         `json:"action"`
+}
+
+func IOC_Response_Format(c *gin.Context, code ReturnCodeEnum, ioc string, action int){
+	resp := IocRespData{}
+	if code != QUERY_SUCCESS{
+		if _, ok := common.ReturnCodeMsg[code]; ok {
+			resp.CODE = int(code)
+			resp.MSG = ReturnCodeMsg[code]
+			c.JSON(500, resp)
+		}else{
+			resp.CODE = 10000
+			resp.MSG = "Unknown"
+			c.JSON(500, resp)
+		}
+	}else{
+		
+	}
+}
+func IOC_Query_Domain(c *gin.Context){
+}
+func IOC_Query(c *gin.Context){
+	url, _ : = c.DefaultQuery("url", "")
+	if url != ""{
+		return
+	}else{
+		domain, _ : = c.DefaultQuery("domain", "")
+		if domain != ""{
+			return
+		}
+	}
+	
+}
+
+func router() http.Handler {
+	e := gin.New()
+	//route
+	{
+		e.GET("/QueryIoc", IOC_Query)	
+	}
+
+	return e
+}
+
+func main() {
+	//设置log
+	gin.SetMode(common.G_ConfigServer.DebugMode)
+	common.LogCron()
+
+	//服务器配置
+	var address = ":" + strconv.Itoa(common.G_ConfigServer.Port)
+
+	server := &http.Server{
+		Addr:              address,
+		Handler:           router(),
+		ReadHeaderTimeout: time.Duration(common.G_ConfigServer.ReadHeaderTimeout) * time.Second,
+		ReadTimeout:       time.Duration(common.G_ConfigServer.ReadTimeout) * time.Second,
+		WriteTimeout:      time.Duration(common.G_ConfigServer.WriteTimeout) * time.Second,
+	}
+
+	g.Go(func() error {
+		return server.ListenAndServe()
+	})
+
+	if err := g.Wait(); err != nil {
+		log.Fatal(err)
+	}
+	
+	resp := QueryRespMsg{}
+}
