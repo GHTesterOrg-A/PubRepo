@@ -10,8 +10,8 @@
 #include <errno.h>
 #include <sys/prctl.h>
 
-
-/* mutil ¾ä±úµÄ×î´óÁ¬½ÓÊı */
+fff
+/* mutil å¥æŸ„çš„æœ€å¤§è¿æ¥æ•° */
 #define  MAX_CONNECT_HANDLE_NUMS  (15)
 CURLM * m_MultiHandle = NULL;
 
@@ -22,7 +22,7 @@ typedef struct github_api_response_data
     int data_size;
 } github_api_response_data_t;
 
-/* ¿ÍÖÆ»¯µÄË½ÓĞÊı¾İ½á¹¹Ìå */
+/* å®¢åˆ¶åŒ–çš„ç§æœ‰æ•°æ®ç»“æ„ä½“ */
 typedef struct github_api_multicurl_privdata
 {
     struct curl_slist *headers;
@@ -76,7 +76,7 @@ void MultiperformFunc()
                 curl_easy_getinfo(msg->easy_handle, CURLINFO_PRIVATE, &PrivData);
                 if(PrivData)
                 {
-                	/* ´¦ÀíÃ¿¸öeasyhandleµÄË½ÓĞÊı¾İ */
+                	/* å¤„ç†æ¯ä¸ªeasyhandleçš„ç§æœ‰æ•°æ® */
                     if(PrivData->wfd)
                         fclose(PrivData->wfd);
                     if(PrivData->headers)
@@ -87,8 +87,8 @@ void MultiperformFunc()
                     PrivData = NULL;
                 }
                 
-                /*µ±Ò»¸öeasy handler´«ÊäÍê³É£¬´Ëeasy handlerÈÔÈ»ÈÔÈ»Í£ÁôÔÚmulti stackÖĞ,
-                µ÷ÓÃcurl_multi_remove_handle½«Æä´Ómulti stackÖĞÒÆ³ı,È»ºóµ÷ÓÃcurl_easy_cleanup½«Æä¹Ø±Õ*/
+                /*å½“ä¸€ä¸ªeasy handlerä¼ è¾“å®Œæˆï¼Œæ­¤easy handlerä»ç„¶ä»ç„¶åœç•™åœ¨multi stackä¸­,
+                è°ƒç”¨curl_multi_remove_handleå°†å…¶ä»multi stackä¸­ç§»é™¤,ç„¶åè°ƒç”¨curl_easy_cleanupå°†å…¶å…³é—­*/
                 curl_multi_remove_handle(m_MultiHandle, e);
                 curl_easy_cleanup(e);
             }
@@ -114,7 +114,7 @@ int main(int argc, char* argv[])
 	CURLSH* m_ShareHandle = curl_share_init();
 	if(m_ShareHandle)
 	{
-		/* ÉèÖÃDNS¹²Ïí£¬²»È»Ã¿¸öeasyhandleÖ´ĞĞÊ±¶¼Òª½âÎöÒ»±éDNS */
+		/* è®¾ç½®DNSå…±äº«ï¼Œä¸ç„¶æ¯ä¸ªeasyhandleæ‰§è¡Œæ—¶éƒ½è¦è§£æä¸€éDNS */
 		curl_share_setopt(m_ShareHandle, CURLSHOPT_SHARE, CURL_LOCK_DATA_DNS);
 	}
 	
@@ -153,20 +153,20 @@ int main(int argc, char* argv[])
 		
         PrivData->headers = headers;
 	
-        /* ÉèÖÃDNS cacheµÄ³¬Ê±Ê±¼äÎª120s */
+        /* è®¾ç½®DNS cacheçš„è¶…æ—¶æ—¶é—´ä¸º120s */
         curl_easy_setopt(EasyCurlHandle, CURLOPT_DNS_CACHE_TIMEOUT, 60*2);
         curl_easy_setopt(EasyCurlHandle, CURLOPT_SHARE, m_ShareHandle);
 
-        curl_easy_setopt(EasyCurlHandle, CURLOPT_URL, "https://api.github.com/repos/GHTesterOrg-A/PubRepo/commits");         /* URLµØÖ·ÉèÖÃ */
+        curl_easy_setopt(EasyCurlHandle, CURLOPT_URL, "https://api.github.com/repos/GHTesterOrg-A/PubRepo/commits");         /* URLåœ°å€è®¾ç½® */
         
         
-		/* ÉèÖÃË½ÓĞÊı¾İÓÃÓÚcurl_multi_performÖ´ĞĞºóÇø·Ö²»Í¬easy¾ä±ú */
+		/* è®¾ç½®ç§æœ‰æ•°æ®ç”¨äºcurl_multi_performæ‰§è¡ŒååŒºåˆ†ä¸åŒeasyå¥æŸ„ */
         curl_easy_setopt(EasyCurlHandle, CURLOPT_PRIVATE, PrivData);
 
-       /* Ìí¼Óµ½multi¾ä±ú */
+       /* æ·»åŠ åˆ°multiå¥æŸ„ */
         curl_multi_add_handle(m_MultiHandle, EasyCurlHandle);
 
-        /* headers¡¢mime²»ÄÜÔÚ´Ë´¦ÊÍ·Å ,·ñÔòµ÷ÓÃmulti½Ó¿ÚÊ±±¼À£*/
+        /* headersã€mimeä¸èƒ½åœ¨æ­¤å¤„é‡Šæ”¾ ,å¦åˆ™è°ƒç”¨multiæ¥å£æ—¶å¥”æºƒ*/
         //curl_slist_free_all(headers);
         //curl_mime_free(mime);
         
