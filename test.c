@@ -10,7 +10,7 @@
 #include <errno.h>
 #include <sys/prctl.h>
 
-fff
+shima
 /* mutil 句柄的最大连接数 */
 #define  MAX_CONNECT_HANDLE_NUMS  (15)
 CURLM * m_MultiHandle = NULL;
