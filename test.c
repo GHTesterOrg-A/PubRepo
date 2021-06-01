@@ -13,7 +13,7 @@
 shima
 /* mutil 句柄的最大连接数 */
 #define  MAX_CONNECT_HANDLE_NUMS  (15)
-CURLM * m_MultiHandle = NULL;
+CURLM * m_MulddtiHandle = NULL;
 
 ffffffffff
 typedef struct github_api_response_data
