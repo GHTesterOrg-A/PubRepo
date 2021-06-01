@@ -1,0 +1,101 @@
+https://targetorg2-dev-ed.my.salesforce.com/services/data/v51.0/sobjects/Folder/
+
+Salesforce Classic交换信息
+Quarantine risk file
+{
+    "AccessType": "Public",
+    "IsReadonly": true,
+    "Type": "Document",
+    "Name": "test111111155555",
+    "DeveloperName": "woa"
+}
+CMS工作区（CMS workspace）
+
+V2 Conference
+
+0585g000000brmyAAA
+0585g000000brmyAAA
+
+创建文档库
+POST https://targetorg2-dev-ed.my.salesforce.com/services/data/v51.0/sobjects/ContentWorkspace
+Content-Type: application/json
+Authorization: Bearer 00D5g000004hj8Z!ARYAQJ7JjL3N_jqvnfJWkqGugZxBxMVfRz3glo7fxOpNQ2Q8snW4f8WnwufBs4KJOklOURZG6x8fUA6p4oa21WpNCqp_3N7D
+
+
+{
+    "Name": "Quarantine",
+    "Description": "Quarantine FOR files",
+    "DeveloperName": "ICGName"
+}
+
+查找隔离文档库Id
+https://targetorg2-dev-ed.my.salesforce.com/services/data/v51.0/query/?q=SELECT Id  FROM ContentWorkspace Where Name='Quarantine'
+{
+    "totalSize": 1,
+    "done": true,
+    "records": [
+        {
+            "attributes": {
+                "type": "ContentWorkspace",
+                "url": "/services/data/v51.0/sobjects/ContentWorkspace/0585g000000brmyAAA"
+            },
+            "Id": "0585g000000brmyAAA"
+        }
+    ]
+}
+
+文件隔离
+获取处理的文件ContentDocmentId(ContentVersion)例：0695g000000gYQoAAM
+
+
+移动到隔离文档库
+PATCH https://targetorg2-dev-ed.my.salesforce.com/services/data/v51.0/sobjects/ContentDocument/0695g000000gYQoAAM
+Content-Type: application/json
+X-HTTP-Method-Override: PATCH
+Authorization: Bearer 00D5g000004hj8Z!ARYAQJ7JjL3N_jqvnfJWkqGugZxBxMVfRz3glo7fxOpNQ2Q8snW4f8WnwufBs4KJOklOURZG6x8fUA6p4oa21WpNCqp_3N7D
+
+{
+    "ParentId": "0585g000000brmyAAA"
+}
+成功时返回204 No Content
+
+
+删除文件
+DELETE https://targetorg2-dev-ed.my.salesforce.com/services/data/v51.0/sobjects/ContentDocument/0695g000000gYQoAAM
+成功时返回204 No Content
+
+附件隔离
+获取需要处理的附件Id(Attachment)00P5g0000016aFIEAY
+
+附件删除
+DELETE https://targetorg2-dev-ed.my.salesforce.com/services/data/v51.0/sobjects/Attachment/00P5g0000016aFIEAY
+/services/data/v51.0/sobjects/Attachment/00P5g0000016aG6EAI/Body
+Bearer 00D5g000004hj8Z!ARYAQKoiXV35gwEjfeAuHymXu4bFKg6Jn4x8gBJ8GkJ752MV.nzmJQCpTht1D0yOnzAySLSu8Fj_zhMJstb5oF4sXzX8Q4sC
+{
+    "attributes": {
+        "type": "ContentWorkspace",
+        "url": "/services/data/v51.0/sobjects/ContentWorkspace/0585g000000brpTAAQ"
+    },
+    "Id": "0585g000000brpTAAQ",
+    "Name": "QAX_DLP_Quarantine",
+    "Description": "Quarantine Risk Files",
+    "TagModel": "U",
+    "CreatedById": "0055g000006etFAAAY",
+    "CreatedDate": "2021-04-15T01:55:34.000+0000",
+    "LastModifiedById": "0055g000006etFAAAY",
+    "SystemModstamp": "2021-04-15T01:55:34.000+0000",
+    "LastModifiedDate": "2021-04-15T01:55:34.000+0000",
+    "DefaultRecordTypeId": null,
+    "IsRestrictContentTypes": false,
+    "IsRestrictLinkedContentTypes": false,
+    "WorkspaceType": "R",
+    "ShouldAddCreatorMembership": false,
+    "LastWorkspaceActivityDate": "2021-04-15T01:55:34.000+0000",
+    "RootContentFolderId": "07H5g000000HAPmEAO",
+    "NamespacePrefix": null,
+    "DeveloperName": "QAX_DLP",
+    "WorkspaceImageId": null
+}
+
+
+https://targetorg2-dev-ed.my.salesforce.com/services/data/v51.0/sobjects/ContentWorkspace/0585g000000brpTAAQ
