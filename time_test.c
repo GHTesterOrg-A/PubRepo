@@ -5,7 +5,7 @@
 int main ()
 {
    time_t rawtime;
-   struct tm *info;
+   //struct tm *info;
    char buffer[80];
  
    rawtime = (time_t)1620784486;
