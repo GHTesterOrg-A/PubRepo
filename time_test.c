@@ -82,6 +82,6 @@ int main ()
    strftime(buffer, 80, "%Y-%m-%dT%H:%M:%S%z", info);
    //printf("格式化的日期 & 时间 : |%s|\n", buffer );
   
-   return(0);
-   //return
+   //return(0);
+   return
 }
