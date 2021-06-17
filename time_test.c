@@ -17,8 +17,8 @@ int main ()
    printf("格式化的日期 & 时间 : |%s|\n", buffer );
 
 
-   //strftime(buffer, 80, "%Y-%m-%d%T%H:%M:%S%Z", info);
-   
+  strftime(buffer, 80, "%Y-%m-%d%T%H:%M:%S%Z", info);
+   iny a = 0;
 
    strftime(buffer, sizeof(buffer), "%a, %d %b %Y %H:%M:%S %Z", info);
    printf("格式化的日期 & 时间 : |%s|\n", buffer );
