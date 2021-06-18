@@ -23,7 +23,7 @@ int main ()
    strftime(buffer, sizeof(buffer), "%a, %d %b %Y %H:%M:%S %Z", info);
    printf("格式化的日期 & 时间 : |%s|\n", buffer );
  
-   char * aaa = "2021-06-01T12:20:15Z";
+   //char * aaa = "2021-06-01T12:20:15Z";
    
 
 
@@ -66,7 +66,7 @@ int main ()
    return(0);
 }
 #endif
-#include <stdio.h>
+//#include <stdio.h>
 #include <time.h>
  
 int main ()
