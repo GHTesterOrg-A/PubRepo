@@ -64,7 +64,10 @@ int main ()
   gettimeofday(&tv_begin, &tz);
   printf("%ld %d %d",tv_begin.tv_sec, tz.tz_minuteswest, tz.tz_dsttime);
    return(0);
-}
+}vvvv//
+   
+   
+   
 #endif
 #include <stdio.h>
 #include <time.h>
