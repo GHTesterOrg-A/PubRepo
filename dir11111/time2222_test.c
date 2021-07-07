@@ -2,8 +2,10 @@
 #include <time.h>
 #include <sys/time.h>
 #if 0
+
 int main ()
 {
+   int a = 0;
    time_t rawtime;
    struct tm *info;
    char buffer[80];
