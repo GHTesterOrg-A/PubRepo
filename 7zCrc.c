@@ -7,10 +7,10 @@ Public domain */
 
 #define kCrcPoly 0xEDB88320
 UInt32 g_CrcTable[256];
-反反复复凤飞飞 
+
 void MY_FAST_CALL CrcGenerateTable(void)
 {
-  UInt32 i;
+  UInt32 i;哈哈
   for (i = 0; i < 256; i++)
   {
     UInt32 r = i;
