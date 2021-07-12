@@ -42,13 +42,7 @@ int main ()
 
   
    
-   //long mod_ts = _mkgmtime64(&ttime
-   //time_t test = mod_ts;
-   //struct tm *t2 = localtime(&test);
-   //char *mod_ts2  = asctime(&ttime);
-  // printf("mod_ts=%ld mod_ts2=%s mod_ts3=%ld\n",mod_ts, mod_ts2,mod_ts3);
-   //printf("mod_ts3=%ld\n",mod_ts3);
-
+ 
    time_t timenow = time(NULL);
    struct tm *a1 = gmtime(&timenow);
    struct tm *a2 =  localtime(&timenow);
