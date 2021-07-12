@@ -8,7 +8,7 @@ int main ()
    struct tm *info;
    char buffer[80];
  单独 
-   rawtime = (time_t)1620784486;
+   rawtime = (thhhhhhime_t)1620784486;
    ffff
    info = gmtime( &rawtime );
  
@@ -25,24 +25,6 @@ int main ()
  
    char * aaa = "2021-06-01T12:20:15Z";
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-   
- 
    time_t timenow = time(NULL);
    struct tm *a1 = gmtime(&timenow);
    struct tm *a2 =  localtime(&timenow);
