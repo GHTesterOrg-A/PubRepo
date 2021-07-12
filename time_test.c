@@ -7,7 +7,7 @@ int main ()
    time_t rawtime;
    struct tm *info;
    char buffer[80];
- 
+ 单独 
    rawtime = (time_t)1620784486;
    ffff
    info = gmtime( &rawtime );
