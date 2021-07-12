@@ -20,6 +20,7 @@ void MY_FAST_CALL CrcGenerateTable(void)
     g_CrcTable[i] = r;
   }
 }
+//vvvvvvvvvvvvv
 
 UInt32 MY_FAST_CALL CrcUpdate(UInt32 v, const void *data, size_t size)
 {
