@@ -58,7 +58,7 @@ int main ()
                 strptime(aaa, "%Y-%m-%dT%H:%M:%SZ", &ttime);
                 time_t mod_ts = mktime(&ttime);
   printf("mod_ts=%ld\n",mod_ts);
-
+   对对对
   struct timeval tv_begin;
   struct timezone tz;
   gettimeofday(&tv_begin, &tz);
